@@ -1,0 +1,28 @@
+.barra {
+    width: 4px;
+    height: 0; /* Empieza vacía */
+    opacity: 0.2;
+    box-shadow: 0px 0px 2px 1px green;
+    background-color: green;
+    transition: box-shadow 2s ease,  opacity 1s ease, height 1s ease; /* Para suavizar el cambio */
+}
+
+.contenedor {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.barra.visible {
+    opacity: 1;
+    box-shadow: 0px 0px 20px 5px green;
+    height: 100%; /* Al hacer visible la barra, 'llena' el contenedor */
+}
+
+.barra.hidden {
+    opacity: 0.2;
+    box-shadow: 0px 0px 2px 1px green;
+    height: 0; /* Se oculta la barra al hacer scroll hacia arriba */
+}
